@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Résultat</title>
+</head>
+<body>
+    <h1>Résultat</h1>
+    <ul>
+        <li>
+            <strong>Inscrits</strong>: <span th:text="${resultat.getInscrits()}"></span>
+        </li>
+        <li>
+            <strong>Votants</strong>: <span th:text="${resultat.getVotants()}"></span> (<span th:text="${resultat.getTauxParticipation()}"></span>%)
+        </li>
+        <li>
+            <strong>Exprimés</strong>: <span th:text="${resultat.getExprimes()}"></span> (<span th:text="${resultat.getTauxExprimes()}"></span>%)
+        </li>
+        <li>
+            <strong>Blancs</strong>: <span th:text="${resultat.getBlancs()}"></span> (<span th:text="${resultat.getTauxBlancs()}"></span>%)
+        </li>
+        <li>
+            <strong>Nuls</strong>: <span th:text="${resultat.getNuls()}"></span> (<span th:text="${resultat.getTauxNuls()}"></span>%)
+        </li>
+    </ul>
+</body>
+</html>
